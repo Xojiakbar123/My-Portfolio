@@ -1,0 +1,167 @@
+:root{
+  --accent-start: #ff8a3a;
+  --accent-end: #ff6a6a;
+  --card-bg: #ffffff;
+  --dark: #0c0c0c;
+  --muted: #6f6f6f;
+}
+
+/* section */
+.contact {
+  padding: 64px 16px;
+  background: transparent;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 80px;
+  margin-top: 90px;
+  color: var(--dark);
+}
+
+/* outer frame centers the card and gives subtle glow */
+.contact-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main card */
+.contact-card {
+  width: 720px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12), 0 6px 18px rgba(0,0,0,0.06) inset;
+  border: 1px solid rgba(12,12,12,0.04);
+  margin-bottom: 60px;
+}
+
+/* role/title */
+.contact-role {
+  text-align: left;
+  margin: 0 0 18px 0;
+  font-size: 18px;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* contact list */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+/* each row */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* label column */
+.label {
+  width: 140px;
+  min-width: 110px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* link / value column */
+.contact-link {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: var(--dark);
+}
+
+/* socials layout inline */
+.socials-row .socials-inline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* individual social button (icon + label) */
+.social-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(12,12,12,0.03);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+  border: 1px solid rgba(12,12,12,0.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* icon size */
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* label next to icon */
+.social-text {
+  font-size: 14px;
+  color: var(--dark);
+}
+
+/* hover: visible but not required for visibility */
+.social-btn:hover{
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, rgba(255,138,122,0.12), rgba(255,110,90,0.06));
+  color: var(--dark);
+  box-shadow: 0 16px 40px rgba(255,110,90,0.08);
+}
+
+/* Hire button */
+.hire-btn {
+  display: flex;
+  width: 665px;
+  width: 85%;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #0b0b0b;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 18px 48px rgba(255,110,90,0.16);
+  transition: transform .14s ease, box-shadow .14s ease;
+
+}
+
+.hire-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 72px rgba(255,110,90,0.22);
+}
+
+/* small screens: keep structure but compact */
+
+@media (max-width: 720px) {
+  .contact-card {
+    padding: 20px;
+  }
+  .label {
+    width: 110px;
+    font-size: 14px;
+  }
+  .social-text { display: none; } /* compact: icons only on very small screens */
+  .contact-role { font-size: 16px; }
+}
+

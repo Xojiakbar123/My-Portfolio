@@ -1,0 +1,305 @@
+/* src/pages/Skills.css */
+
+/* base variables (import from global if you have one) */
+:root {
+  --bg: #0b0b0b;
+  --accent-start: #ff8a3a;
+  --accent-end: #ff6a6a;
+  --text: #ffffff;
+  --muted: #bdbdbd;
+  --dark-text: #111111;
+  --glass: rgba(255,255,255,0.02);
+}
+
+/* page layout */
+.skills-page {
+  padding: 48px 0;
+  color: var(--text);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* top tab box */
+.skills-topbox {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+}
+.skills-tab {
+  background: transparent;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 700;
+  transition: all 0.16s ease;
+}
+.skills-tab:hover {
+  color: var(--accent-end);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(255,110,90,0.05);
+}
+.skills-tab.active {
+  color: var(--accent-end);
+  background: linear-gradient(
+    90deg,
+    rgba(255,138,122,0.06),
+    rgba(255,110,90,0.03)
+  );
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* sections */
+.skills-sections {
+  margin-top: 18px;
+  display: grid;
+  gap: 36px;
+}
+.skills-section,
+.skills-special {
+  padding: 22px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+  box-shadow: 0 28px 72px rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* headings */
+.section-heading {
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  color: var(--accent-start);
+}
+
+/* centered box style for large content blocks */
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.01),
+    rgba(255,255,255,0.005)
+  );
+  box-shadow: 0 18px 50px rgba(0,0,0,0.48), 0 6px 18px rgba(255,110,90,0.03) inset;
+}
+
+/* tech grid */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.tech-item {
+  min-width: 140px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.01);
+  color: var(--dark-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.14s ease,
+    color 0.12s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  cursor: default;
+}
+.tech-item .tech-text {
+  color: #222;
+}
+.tech-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: linear-gradient(90deg, rgba(255,138,122,0.08), rgba(255,110,90,0.03));
+  color: var(--dark-text);
+  box-shadow: 0 22px 60px rgba(255,110,90,0.08);
+}
+
+/* notes and centered text */
+.section-note {
+  color: var(--dark-text);
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 900px;
+}
+.centered-text {
+  text-align: center;
+  color: var(--dark-text);
+  opacity: 0.9;
+}
+
+/* actions */
+.service-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.action-btn {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #111;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  box-shadow: 0 12px 36px rgba(255,110,90,0.16);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+.action-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(255,110,90,0.22);
+}
+.action-btn.outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--dark-text);
+}
+
+/* pedagogy */
+.pedagogy-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.pedagogy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 260px;
+}
+.ped-item {
+  padding: 14px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.01);
+  color: var(--dark-text);
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.02);
+  cursor: pointer;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.ped-item:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(90deg, rgba(255,138,122,0.06), rgba(255,110,90,0.03));
+  box-shadow: 0 20px 48px rgba(255,110,90,0.08);
+  color: #111;
+}
+.ped-item.open {
+  background: linear-gradient(90deg, rgba(255,138,122,0.1), rgba(255,110,90,0.04));
+  color: #111;
+  box-shadow: 0 22px 60px rgba(255,110,90,0.10);
+}
+
+/* pedagogy details */
+.pedagogy-details {
+  flex: 1;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.01));
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+  text-align: center;
+}
+.ex-title {
+  color: var(--accent-start);
+  margin: 6px 0;
+}
+.explain-pre {
+  white-space: pre-wrap;
+  color: var(--dark-text);
+  text-align: left;
+  max-width: 900px;
+  margin: 12px auto 0 auto;
+  background: rgba(255,255,255,0.01);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* soft list */
+.soft-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.soft-item {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.01);
+  color: var(--dark-text);
+  font-weight: 700;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease;
+}
+.soft-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+
+/* special */
+.skills-special {
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .pedagogy-layout {
+    flex-direction: column;
+  }
+  .skills-topbox {
+    gap: 12px;
+    padding: 14px;
+  }
+  .tech-item {
+    min-width: 120px;
+  }
+}
+@media (max-width: 520px) {
+  .skills-topbox {
+    padding: 12px;
+    gap: 8px;
+  }
+  .tech-item {
+    min-width: 100px;
+    padding: 10px;
+  }
+  .ped-item {
+    padding: 12px;
+    min-width: unset;
+  }
+  .soft-item {
+    width: 100%;
+    max-width: 420px;
+  }
+  .explain-pre {
+    text-align: left;
+  }
+}

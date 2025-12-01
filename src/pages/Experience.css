@@ -1,0 +1,159 @@
+:root {
+  --bg: #0b0b0b;
+  --accent-start: #ff8a3a;
+  --accent-end: #ff6a6a;
+  --text: #e8e8e8;
+  --text-strong: #ffffff;
+  --muted: #c8c8c8;
+  --panel: rgba(255,255,255,0.03);
+}
+
+.exp.container {
+  padding: 60px 20px;
+  color: var(--text);
+}
+
+.exp-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 6px;
+  font-weight: 800;
+  color: #0b0b0b;
+}
+.exp-title .accent {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.exp-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-size: 16px;
+  color: #0b0b0b;
+}
+
+.exp-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.exp-card {
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  padding-bottom: 12px;
+  transition: 0.25s ease;
+}
+.exp-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,138,122,0.25);
+  box-shadow: 0 30px 80px rgba(255,110,90,0.15);
+}
+
+.exp-head {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  align-items: center;
+}
+
+.exp-badge {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 12px 30px rgba(0,0,0,0.4);
+  color: var(--accent-start);
+}
+
+.exp-company {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--text-strong);
+    color: #0b0b0b;
+
+}
+.exp-role {
+  color: var(--muted);
+  font-size: 13px;
+  color: #ff6a6a;
+}
+
+.exp-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.exp-date {
+  color: var(--muted);
+  font-size: 13px;
+  color: #0b0b0b;
+}
+
+.exp-toggle {
+  margin-top: 8px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.exp-toggle:hover {
+  color: var(--text-strong);
+  background: rgba(255,255,255,0.05);
+}
+
+.exp-body {
+  padding: 0 20px 10px;
+}
+
+.exp-short {
+  color: var(--text-strong);
+  margin-bottom: 10px;
+    color: #0b0b0b;
+
+}
+
+.exp-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.35s ease;
+  margin-left: 20px;
+  color: var(--muted);
+  
+}
+
+.exp-details.visible {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.hire-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  color: #111;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255,110,90,0.25);
+  transition: 0.25s ease;
+}
+.hire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(255,110,90,0.35);
+}
